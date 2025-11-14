@@ -4,11 +4,15 @@ g = const.GRAVITATIONAL_CONST
 
 def calculate(M, r, timeNearBlackHole):
     """
-    
-    M: Mass of the black hole (kg)
-    c: Speed of light (m/s)
-    G: Gravitational constant (m^3 kg^-1 s^-2)
-    r: Radial distance from the center of the black hole (m)
+    Calculates the time passed for someone observing someone else near a black hole.
+
+    Args:
+        M (int): Mass of the black hole in Kg
+        r (int): Distance from the center of the black hole in m
+        timeNearBlackHole (int): Time spent near the black hole in seconds
+
+    Returns:
+        float: Time passed from someone not near the blackhole based on the time someone near a black hole experiences.
     """
     hi = (2 * (g * M)) / (r * pow(c, 2))
     tDistantObserver = timeNearBlackHole / (1 - hi) ** 0.5
@@ -17,4 +21,5 @@ def calculate(M, r, timeNearBlackHole):
 mass = int(input("Enter mass of Black Hole (kg): "))
 radius = int(input("Enter the distance from the center of the Black Hole (m): "))
 timeNearBH = int(input("Enter the time near the Black Hole (s): "))
+
 print(f"Time passed from distant observer: {calculate(mass, radius, timeNearBH)} seconds")
