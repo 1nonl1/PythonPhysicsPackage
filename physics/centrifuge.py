@@ -1,4 +1,4 @@
-from physics.importantConstants import Constant as const
+from importantConstants import Constant as const
 pi = const.PI
 
 def revolutionTime(g, r):

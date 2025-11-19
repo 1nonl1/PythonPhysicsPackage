@@ -1,5 +1,5 @@
 import matplotlib.pyplot as plt
-from physics.importantConstants import Constant as const
+from importantConstants import Constant as const
 c = const.c
 
 
